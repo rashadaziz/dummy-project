@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          This is staging with custom domain!!
+          This is staging with custom domain pasti!!!
         </h1>
 
         <p className={styles.description}>
