@@ -12,6 +12,7 @@ jobs:
         with:
           vercel-cli: vercel
           vercel-token: ${{ secrets.MY_PERSONAL_TOKEN }}
+          vercel-args: "--prod"
           vercel-org-id: ${{ secrets.ORG_ID }}
           vercel-project-id: ${{ secrets.PROJECT_STAGING_ID }}
           working-directory: ./
