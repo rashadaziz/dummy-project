@@ -13,7 +13,7 @@ jobs:
           vercel-cli: vercel
           vercel-token: ${{ secrets.MY_PERSONAL_TOKEN }}
           vercel-org-id: ${{ secrets.ORG_ID }}
-          vercel-project-id: ${{ secrets.PROJECT_ID }}
+          vercel-project-id: ${{ secrets.PROJECT_STAGING_ID }}
           working-directory: ./
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
