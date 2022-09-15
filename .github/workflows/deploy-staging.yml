@@ -1,0 +1,20 @@
+name: deploy to vercel staging
+on:
+  push:
+    branches:
+      - staging
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ngduc/vercel-deploy-action@master
+        with:
+          vercel-cli: vercel
+          vercel-token: ${{ secrets.MY_PERSONAL_TOKEN }}
+          vercel-args: "--prod"
+          vercel-org-id: ${{ secrets.ORG_ID }}
+          vercel-project-id: ${{ secrets.PROJECT_STAGING_ID }}
+          working-directory: ./
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
